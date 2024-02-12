@@ -1,0 +1,7 @@
+{
+	"name": "ec2_alb_private_hostname",
+	"version": "1.0.0",
+	"description": "",
+	"main": "ec2_alb_private_hostname.js",
+	"dependencies": {}
+}

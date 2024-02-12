@@ -1,0 +1,44 @@
+version: ">= 0.14.0, < 1.0.0"
+
+formatter: markdown table
+settings:
+  anchor: true
+  color: true
+  default: true
+  description: false
+  escape: false
+  indent: 2
+  required: false
+  sensitive: true
+  type: true
+
+sections:
+  show:
+    - requirements
+    - providers
+    - inputs
+    - outputs
+    - modules
+    - resources
+    - data-sources
+
+content: |-
+  {{ .Requirements }}
+
+  {{ .Providers }}
+
+  {{ .Inputs }}
+
+  {{ .Outputs }}
+
+  {{ .Modules }} 
+   
+  {{ .Resources }}
+
+output:
+  file: "README.md"
+  mode: inject
+  template: |-
+    <!-- BEGIN_TF_DOCS -->
+    {{ .Content }}
+    <!-- END_TF_DOCS -->
