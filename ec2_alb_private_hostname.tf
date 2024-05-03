@@ -184,7 +184,7 @@ resource "aws_lb_listener_rule" "ec2_alb_private_hostname" {
 
   condition {
     source_ip {
-      values = var.source_ip
+      values = var.source_ips
     }
   }
 
